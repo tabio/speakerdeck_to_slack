@@ -74,6 +74,7 @@ responses = Request.get_feed
 notifier = Slack::Notifier.new WEBHOOK_URL
 
 responses.each do |obj|
+  message << []
   message << '-' * 30
   message << "*#{obj.title}*"
   message << obj.content
